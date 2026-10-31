@@ -5,7 +5,7 @@
 @section('content')
     <h1>Customer Accounts</h1>
 
-    <table>
+    <table border="1" cellpadding="10">
         <thead>
             <tr>
                 <th>ID</th>
@@ -18,10 +18,10 @@
         <tbody>
             @foreach ($customers as $customer)
                 <tr>
-                    <td>{{ $customer['id'] }}</td>
-                    <td>{{ $customer['full_name'] }}</td>
-                    <td>{{ $customer['email'] }}</td>
-                    <td>{{ $customer['phone'] }}</td>
+                    <td>{{ $customer->id }}</td>
+                    <td>{{ $customer->full_name }}</td>
+                    <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->phone }}</td>
                 </tr>
             @endforeach
         </tbody>
